@@ -1,0 +1,14 @@
+#+TITLE: README.org
+#+AUTHOR: 林晨<lc1990linux@gmail.com>
+#+SETUPFILE: /home/chris2/Documents/Blog/utils/latex.setup
+
+#+SETUPFILE: /home/chris2/Documents/Blog/utils/worg.setup
+
+#+SETUPFILE: /home/chris2/Documents/Blog/utils/theme-readtheorg.setup
+
+* How to run
+  #+BEGIN_SRC sh
+  npm i
+  npm run dev
+  #+END_SRC
+  
