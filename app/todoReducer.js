@@ -5,21 +5,38 @@
  * Create  : Wednesday, 16 November 2016.
  */
 
-const todo = (state = [], action) => {
-  console.log(9, state, action);
+const todo = (state, action) => {
   switch (action.type) {
     case 'ADD':
-      return [
+      return {
+        id: action.id,
+        text: action.text,
+        completed: false
+      };
+    case 'TOGGLE':
+      if (state.id !== action.id) {
+        return state;
+      }
+      return {
         ...state,
-        {
-          id: action.id,
-          text: action.text,
-          completed: false
-        }
-      ];
+        completed: !state.completed
+      };
     default:
       return state;
   }
 };
 
-export default todo;
+const todos = (state = [], action) => {
+  switch (action.type) {
+    case 'ADD':
+      return [
+        ...state,
+        todo(undefined, action)
+      ];
+    case 'TOGGLE':
+      return state.map(t => todo(t, action));
+    default:
+      return state;
+  }
+};
+export default todos;

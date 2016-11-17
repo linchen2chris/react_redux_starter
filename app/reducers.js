@@ -7,11 +7,11 @@
 
 import { combineReducers } from 'redux';
 import todos from './todoReducer';
-import typeText from './typeReducer';
+import visibilityFilter from './visibilityFilter';
 
 const todoApp = combineReducers({
   todos,
-  currentText: typeText
+  visibilityFilter
 });
 
 export default todoApp;

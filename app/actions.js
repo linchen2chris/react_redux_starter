@@ -5,13 +5,19 @@
  * Create  : Wednesday, 16 November 2016.
  */
 
-export const typeAction = typeValue => ({
-  type: 'TYPING',
-  currentText: typeValue
+let id = 0;
+export const addTodo = text => ({
+  type: 'ADD',
+  id: id++,
+  text
 });
 
-export const addAction = text => ({
-  type: 'ADD',
-  id: 2,
-  text
+export const toggleTodo = id => ({
+  type: 'TOGGLE',
+  id
+});
+
+export const setVisibilityFilter = filter => ({
+  type: 'SET_VISIBILITY_FILTER',
+  filter
 });
