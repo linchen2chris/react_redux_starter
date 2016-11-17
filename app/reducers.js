@@ -7,9 +7,11 @@
 
 import { combineReducers } from 'redux';
 import todos from './todoReducer';
+import typeText from './typeReducer';
 
 const todoApp = combineReducers({
-  todos
+  todos,
+  currentText: typeText
 });
 
 export default todoApp;

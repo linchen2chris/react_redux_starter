@@ -8,12 +8,12 @@ import reducer from './reducers';
 const initState = {
   todos: [
     {
-      text: 'do a demo',
-      complete: false
+      id: 1,
+      text: 'the first one'
     },
     {
-      text: 'add redux',
-      complete: true
+      id: 2,
+      text: 'the second one'
     }
   ]
 };

@@ -10,6 +10,8 @@ export const typeAction = typeValue => ({
   currentText: typeValue
 });
 
-export const addAction = () => ({
-  type: 'ADD'
+export const addAction = text => ({
+  type: 'ADD',
+  id: 2,
+  text
 });
