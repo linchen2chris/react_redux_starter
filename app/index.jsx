@@ -7,7 +7,9 @@ import reducer from './reducers';
 
 const log = store => next => (action) => {
   console.log(19, store.getState());
+  action.text = action.text.toUpperCase();
   const result = next(action);
+  console.log(22, store.getState());
   return result;
 };
 
