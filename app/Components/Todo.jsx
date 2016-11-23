@@ -2,9 +2,9 @@ import React, { PropTypes } from 'react';
 
 const Todo = ({ text, completed, onClick }) => (
   <li
-    onClick={onClick}
-    style={{ textDecoration: completed ? 'line-through' : 'none' , color: completed ? 'green' : 'red' }}
+    style={{ textDecoration: completed ? 'line-through' : 'none', color: completed ? 'green' : 'red' }}
   >
+    <input type="checkbox" onClick={onClick} checked={completed} />
     {completed ? `DONE: ${text}` : `TODO: ${text}` }
   </li>
 );
