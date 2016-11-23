@@ -21,6 +21,14 @@ const todo = (state, action) => {
         ...state,
         completed: !state.completed
       };
+    case 'DEADLINE':
+      if (state.id !== action.id) {
+        return state;
+      }
+      return {
+        ...state,
+        deadline: state.deadline
+      };
     default:
       return state;
   }
@@ -34,6 +42,8 @@ const todos = (state = [], action) => {
         todo(undefined, action)
       ];
     case 'TOGGLE':
+      return state.map(t => todo(t, action));
+    case 'DEADLINE':
       return state.map(t => todo(t, action));
     default:
       return state;

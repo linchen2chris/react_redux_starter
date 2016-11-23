@@ -21,3 +21,8 @@ export const setVisibilityFilter = filter => ({
   type: 'SET_VISIBILITY_FILTER',
   filter
 });
+
+export const setDeadline = todoId => ({
+  type: 'DEADLINE',
+  id: todoId
+});
