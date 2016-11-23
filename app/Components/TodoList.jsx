@@ -3,13 +3,13 @@ import Todo from './Todo';
 
 const TodoList = ({ todos, onClickTodo }) => (
 
-  <ol>
+  <ul>
     {
       todos.map(todo => (
         <Todo key={todo.id} {...todo} onClick={() => onClickTodo(todo.id)} />
       ))
     }
-  </ol>
+  </ul>
 );
 
 TodoList.propTypes = {
