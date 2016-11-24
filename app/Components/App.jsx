@@ -10,6 +10,8 @@ const App = () => (
     <VisibleTodoList />
     <Footer />
     <Test />
+    <br />
+    <Test />
   </div>
 );
 
