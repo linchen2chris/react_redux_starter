@@ -6,7 +6,11 @@ const TodoList = ({ todos, onClickTodo, setDeadline }) => (
   <ul>
     {
       todos.map(todo => (
-        <Todo key={todo.id} {...todo} onClick={() => onClickTodo(todo.id)} setDeadline={() => setDeadline(todo.id)} />
+        <Todo
+          key={todo.id} {...todo}
+          onClick={() => onClickTodo(todo.id)}
+          setDeadline={() => setDeadline(todo.id)}
+        />
       ))
     }
   </ul>

@@ -5,16 +5,16 @@
  * Create  : Wednesday, 16 November 2016.
  */
 
-let id = 0;
+const id = 0;
 export const addTodo = text => ({
   type: 'ADD',
-  id: id++,
+  id: id + 1,
   text
 });
 
-export const toggleTodo = id => ({
+export const toggleTodo = todoId => ({
   type: 'TOGGLE',
-  id
+  id: todoId
 });
 
 export const setVisibilityFilter = filter => ({
