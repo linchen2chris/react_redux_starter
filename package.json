@@ -4,7 +4,7 @@
   "description": "test",
   "main": "index.js",
   "scripts": {
-    "test": "babel-node index.js",
+    "test": "mocha ./app/logMiddleware.spec.js",
     "dev": "webpack-dev-server --hot"
   },
   "keywords": [

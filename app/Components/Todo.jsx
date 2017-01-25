@@ -7,7 +7,7 @@ const Todo = ({ text, completed, onClick, setDeadline }) => (
     <input type="checkbox" onClick={onClick} checked={completed} />
     {completed ? `DONE: ${text}` : `TODO: ${text}` }
     <br />
-    截止日期:<input type="date" onBlur={setDeadline} />
+    截止日期:<input type="date" onBlur={setDeadline} min="Monday"/>
   </li>
 );
 

@@ -5,10 +5,10 @@
  * Create  : Wednesday, 16 November 2016.
  */
 
-const id = 0;
+let nextId = 0;
 export const addTodo = text => ({
   type: 'ADD',
-  id: id + 1,
+  id: nextId++,
   text
 });
 

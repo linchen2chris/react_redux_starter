@@ -4,19 +4,9 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import App from './Components/App';
 import reducer from './reducers';
+import logMiddleware from './logMiddleware';
 
-const log = store => next => (action) => {
-  console.log(19, store.getState());
-  const newAction = { ...action };
-  if (action.type === 'ADD') {
-    newAction.text = action.text.toUpperCase();
-  }
-  const result = next(newAction);
-  console.log(22, store.getState());
-  return result;
-};
-
-const store = createStore(reducer, {}, applyMiddleware(log));
+const store = createStore(reducer, {}, applyMiddleware(logMiddleware));
 
 const app = document.createElement('div');
 document.body.appendChild(app);
