@@ -42,6 +42,10 @@ module.exports = {
         test: /\.jsx?$/,
         loaders: ['babel'],
         include: APP_PATH
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
       }
     ]
   },
@@ -51,6 +55,6 @@ module.exports = {
     })
   ],
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.css']
   },
 }
