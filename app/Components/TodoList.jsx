@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Todo from './Todo';
 
 const TodoList = ({ todos, onClickTodo, setDeadline }) => (
@@ -7,7 +8,8 @@ const TodoList = ({ todos, onClickTodo, setDeadline }) => (
     {
       todos.map(todo => (
         <Todo
-          key={todo.id} {...todo}
+          key={todo.id}
+          {...todo}
           onClick={() => onClickTodo(todo.id)}
           setDeadline={() => setDeadline(todo.id)}
         />

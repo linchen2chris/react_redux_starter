@@ -13,8 +13,8 @@ document.body.appendChild(app);
 /* ReactDOM.render(<App />, app);*/
 
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  app
+    <Provider store={store}>
+        <App/>
+    </Provider>,
+    app
 );

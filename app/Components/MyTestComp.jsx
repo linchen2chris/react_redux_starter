@@ -30,11 +30,11 @@ export default class CustomTextInput extends React.Component {
   }
 
   componentWillUnmount() {
-    console.log('componentWillUnmount');
+    console.log('componentWillUnmount')
   }
 
   priv = () => {
-    this.div.scrollLeft -= 100;
+    this.div.scrollLeft -= 100 ;
   };
   next = () => {
     this.div.scrollLeft += 100;

@@ -27,7 +27,7 @@ class SearchInput extends Component {
     this.setState({
       ...this.state,
       value,
-      showOption: false,
+      showOption: false
     });
   }
 
@@ -76,11 +76,11 @@ class SearchInput extends Component {
           onChange={event => this.search(event.target.value)}
           onKeyDown={event => this.onKeyDown(event)}
         />
-        {this.state.result && this.state.result.length > 0 && this.state.showOption && 
-         <div
-           className="search-options--container"
-           ref={div => this.div = div}
-         >
+        {this.state.result && this.state.result.length > 0 && this.state.showOption &&
+        <div
+          className="search-options--container"
+          ref={div => this.div = div}
+        >
           {this.state.result.map((repo, index) => (
             <li
               className={`search-option ${this.state.activeIndex === index ? 'search-option--active' : ''}`}

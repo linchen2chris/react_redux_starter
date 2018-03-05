@@ -1,2 +1,4 @@
 node_modules/
 src/
+.idea/
+**/.DS_Store
