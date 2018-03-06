@@ -2,3 +2,6 @@ node_modules/
 src/
 .idea/
 **/.DS_Store
+react_redux_starter.iml
+yarn-error.log
+npm-debug.log.2388817936
